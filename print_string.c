@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * print_string - printf the string to stdout
- * @args: arguments of int
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * print_string - print the string using write
+ * @args: arguments of va_list
+ * Return: number of printed characters
  */
 
 int print_string(va_list args)
@@ -12,6 +11,10 @@ int print_string(va_list args)
 	char *string = va_arg(args, int);
 	int len = 0;
 
+	if (!string)
+	{
+		string = "(NULL)";
+	}
 	while (len != '\0')
 	{
 		len++;
