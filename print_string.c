@@ -8,17 +8,17 @@
 
 int print_string(va_list args)
 {
-	char *string = va_arg(args, int);
+	char *str = va_arg(args, char *);
+
 	int len = 0;
 
-	if (!string)
+	if (!str)
 	{
-		string = "(NULL)";
+		str = "(NULL)";
 	}
-	while (len != '\0')
+	while (str[len])
 	{
 		len++;
 	}
-	write(1, &string[len], 1);
-	return (1);
+	return (write(1, str, len));
 }
