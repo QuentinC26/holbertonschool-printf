@@ -1,23 +1,23 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.3">
-  <diagram name="Page-1" id="1pw6rGKY7hqBKK8Nk_ZN">
+  <diagram name="Page-1" id="ol3LuLL8GNdlsIa9_EVp">
     <mxGraphModel>
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2" value="Début de la fonction _printf" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="105" y="8" width="260" height="78" as="geometry" />
+          <mxGeometry x="39" y="8" width="260" height="78" as="geometry" />
         </mxCell>
         <mxCell id="3" value="Vérifier la validité de l&#39;argument format" style="rounded=1;arcSize=20;strokeWidth=2" vertex="1" parent="1">
-          <mxGeometry x="120" y="136" width="230" height="78" as="geometry" />
+          <mxGeometry x="54" y="136" width="230" height="78" as="geometry" />
         </mxCell>
-        <mxCell id="4" value="Si format est NULL?" style="rounded=1;arcSize=20;strokeWidth=2" vertex="1" parent="1">
-          <mxGeometry x="150" y="264" width="170" height="54" as="geometry" />
+        <mxCell id="4" value="format est NULL ?" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="78" y="264" width="181" height="181" as="geometry" />
         </mxCell>
-        <mxCell id="5" value="Action à effectuer" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="8" y="391" width="191" height="54" as="geometry" />
+        <mxCell id="5" value="retourner 0" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="8" y="518" width="142" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="6" value="Autre action à effectuer" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="249" y="391" width="234" height="54" as="geometry" />
+        <mxCell id="6" value="Sinon, c" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="200" y="518" width="117" height="54" as="geometry" />
         </mxCell>
         <mxCell id="7" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="2" target="3">
           <mxGeometry relative="1" as="geometry">
@@ -29,17 +29,17 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9" value="Oui" style="curved=1;startArrow=none;endArrow=block;exitX=0.17;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="5">
+        <mxCell id="9" value="Oui" style="curved=1;startArrow=none;endArrow=block;exitX=0.15;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="5">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="103" y="355" />
+              <mxPoint x="79" y="481" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="10" value="Non" style="curved=1;startArrow=none;endArrow=block;exitX=0.83;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="6">
+        <mxCell id="10" value="Non" style="curved=1;startArrow=none;endArrow=block;exitX=0.85;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="6">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="366" y="355" />
+              <mxPoint x="258" y="481" />
             </Array>
           </mxGeometry>
         </mxCell>
