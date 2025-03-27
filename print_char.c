@@ -1,5 +1,3 @@
-#include <unistd.h>
-#include <stdarg.h>
 #include "main.h"
 
 /**
@@ -9,10 +7,10 @@
  * Return: 1
  */
 
-int print_char(va_list args) 
+int print_char(va_list args)
 {
-    char c = va_arg(args, int);
+	char characters = va_arg(args, int);
 
-    write (1, &c, 1);
-    return (1);
+	write(1, &characters, 1);
+	return (1);
 }
