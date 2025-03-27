@@ -1,27 +1,29 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
-*function - the function pointer for print the format
+*get_function - the function pointer for associate the function
 *@argument: specificator of format
-*Return: 0 (Success)
+*Return: Pointer to the corresponding function, or NULL if unknown
 */
 
-int (*function(char argument))(va_list)
+int (*get_function(char argument))(va_list)
 {
-	format the_format[] = {
+	spec_t specifiers[] = {
+		{'c', print_char},
 		{'s', print_string},
-		{'\0', NULL},
+		{'%', print_percent},
+		{'d', print_number},
+		{'i', print_number},
+		{0, NULL}
 	};
 
 	int count = 0;
 
-	while (the_format[count].type_of_format)
+	while (specifiers[count].spec)
 	{
-		if (the_format[count].type_of_format == argument)
+		if (specifiers[count].spec == argument)
 		{
-			return (the_format[count].function);
+			return (specifiers[count].function);
 		}
 		count++;
 	}
