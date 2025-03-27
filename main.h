@@ -4,21 +4,29 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
+#include <limits.h>
+#include <stdlib.h>
 
 /**
- * struct format - The Base of the struct _printf
+ * struct specifier - The Base of specipy the type of format
  * @function: The function pointer for activate the code in format_information
- * @type_of_format: The pointer to string for attribute a type of format
+ * @spec: The characters for attribute a type of format
  */
 
-typedef struct format
+typedef struct specifier
 {
-	char type_of_format;
+	char spec;
 	int (*function)(va_list);
 }
-format;
+spec_t;
 
 int _printf(const char *format, ...);
+int _putchar(char c);
+int print_char(va_list args);
 int print_string(va_list args);
+int print_percent(va_list args);
+int print_number(va_list args);
+int (*get_function(char argument))(va_list);
 
 #endif /*MAIN_H_*/
