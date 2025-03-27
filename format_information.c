@@ -5,7 +5,6 @@
 *@argument: specificator of format
 *Return: Pointer to the corresponding function, or NULL if unknown
 */
-
 int (*get_function(char argument))(va_list)
 {
 	spec_t specifiers[] = {
