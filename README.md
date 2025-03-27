@@ -10,7 +10,7 @@ The C Printf project is a teamwork project with one peer. Together, we must writ
 
 ## The documents required for this project
 
-For this project, we must realize four documents. 
+For this project, we must realize four documents.
 
 * README.md
 
@@ -112,7 +112,7 @@ ifndef and define are used for avoid a multiples inclusion of the same header fi
 
 * The header file
 
-I use the standard library <stdio.h>, <stdarg.h>, <unistd.h> and <string.h> for use all command i need.
+I use the standard library <stdio.h>, <stdarg.h>, <unistd.h>, <string.h> and <limits.h> for use all command i need.
 
 * Commentary
 
@@ -120,7 +120,7 @@ I add a different commentary for describe the different usefulness function, fun
 
 * Typedef struct format
 
-I add a structure format with 2 member. The first member is char type_of_format. This member is used for indicate the type of format. This second member is int (*function)(va_list). This function pointer is used for responsible for data processing, depending on the type of format.
+I add a structure format with 2 member. The first member is char spec. This member is used for indicate the type of format. This second member is int (*function)(va_list). This function pointer is used for responsible for data processing, depending on the type of format.
 
 * The prototype
 
@@ -129,4 +129,92 @@ I add all prototype for works in any file linked to main.h
 * endif
 
 I add endif in the end of the file for it closes the inclusion block
+
+## format_information file
+
+* The header file
+
+Im add a main.h for so that it applies the commands related to the commands I'm going to put in this file.
+
+* Commentary
+
+I add a different commentary for describe the different usefulness function, function pointer ect...
+
+* Struct the_format
+
+I add a structure the_format from the typedef structure format. The_format structure is used for to determine whether ‘c’ is a character, ‘s’ is a string, % is a percent, 'd' is a float, 'i' is a integer and 0 is for the NULL character.
+
+* int count = 0
+
+I add a int count for browse the array. I add a value count at 0 for start in the begin the string.
+
+* while loop and if condition
+
+The while loop specifiers[count].spec means that we will continue to browse the specifiers array as long as the current element, specified by count, has a value for spec.
+
+* return (NULL)
+
+The return NULL is used for say if specifiers[count].spec is different from an element, then it returns NULL
+
+## _putchar.c file
+
+* The header file
+
+Im add a main.h for so that it applies the commands related to the commands I'm going to put in this file.
+
+* Commentary
+
+I add a different commentary for describe the different usefulness function, function pointer ect...
+
+* _putchar command
+
+In the prototype int _putchar(char c), i use a write command in the return for print one character.
+
+## print_char.c
+
+* The header file
+
+Im add a main.h for so that it applies the commands related to the commands I'm going to put in this file.
+
+* Commentary
+
+I add a different commentary for describe the different usefulness function, function pointer ect...
+
+* The details of in the prototype print_char(va_list args)
+
+In the prototype int print_char(va_list args), i use a write command in the return for print one character with the variadic instructions.
+
+## print_string.c
+
+* The header file
+
+Im add a main.h for so that it applies the commands related to the commands I'm going to put in this file.
+
+* Commentary
+
+I add a different commentary for describe the different usefulness function, function pointer ect...
+
+* The prototype int print_string(va_list args)
+
+In the prototype int print_string(va_list args), i use a write command in the return for print a string of character with the variadic instructions.
+
+* Before the return write
+
+Before the return write, i add if condition !str which will execute the opposite of its initial command, with the ! in front of the variable name. In this condition, str will printed (NULL).
+
+The while loop will browse the array str with the variable len.
+
+## print_percent
+
+* The header file
+
+Im add a main.h for so that it applies the commands related to the commands I'm going to put in this file.
+
+* Commentary
+
+I add a different commentary for describe the different usefulness function, function pointer ect...
+
+* The prototype int print_percent(va_list args)
+
+I add a void(args) for ignore the arguments with the void type and i return only the % with the _putchar command.
 
