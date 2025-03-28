@@ -10,21 +10,13 @@ The C Printf project is a teamwork project with one peer. Together, we must crea
 
 ## Setup and installation instructions
 
-* Clone the repository
+* Clone the repository (git clone)
+
+The command for clone the repository is git clone link of https/ssh url.
 
 Here is the link to clone the repository so that you can clone the repository: https://github.com/QuentinC26/holbertonschool-printf#
 
-* Create a file main.h
-
-You must first create a main.h file with the preprocessor directions: #ifndef and define.
-
-* What should you put in main.h?
-
-In this file, you need to add all the prototypes of all the existing files that will be used to recreate the command.
-
-* In the end of the file
-
-To protect your files, don't forget to add the #endif to avoid double inclusions.
+For get the link of https or ssh url, you click on the < code > you see in green. Finally, you copy the link 
 
 ## User guide
 
@@ -62,6 +54,16 @@ I use %c to print a character, so %c will be the first letter.
 _printf("Greeting: %s\n", "Hello");
 
 I use %s to print a string, so %s will be your string.
+
+* Compilation
+
+You use the compilation command for print the result you wish to.
+
+You first enter the following command, which will compile the file : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+
+Then add -o as to print the desired result.
+
+Once this is done, simply type ./as to see if the code displays the result you want.
 
 ## A few tips
 
